@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    
 
 }
 :root{
@@ -15,13 +16,19 @@
 }
 html{
     font-size: 65.5%;
+    overflow-x: hidden;
 }
 body{
     min-height: 10vh;
     background: linear-gradient(135deg, #62d2ca, #e0e4e6, #18c8c2);
     font-family: 'Times New Roman';
+    background-size: cover;
+    overflow-x: hidden;
 }
-
+.container, .main, .wrapper {
+  width: 100%;
+  max-width: 100%;
+}
 section{
     min-height: 85vh;
     padding: 10rem  9% 2rem;
@@ -142,9 +149,11 @@ section{
 
 #menu-icon{
     display:block;
+  
 }
 .logo{
     margin-left: 0.2rem;
+    
 }
 
 
@@ -153,7 +162,8 @@ section{
     position:absolute;
     top:100%;
     right:0;
-    width:40%;
+    width:50%;
+    height: 1200px;
     background: var(--main-color);
     display:none;
     flex-direction:column;
@@ -294,13 +304,13 @@ h3.my-profession{
 .home{
     flex-direction: column;
     text-align: center;
-    padding: 30px 20px;
-    width: 380px;
+    width: 100%;
+    padding: 0px
 }
 
 .home-ing img{
    
-    width: 100%;
+    width: 100%;margin-top: 30px;
     max-width: 300px;
     height: auto;
 }
@@ -406,6 +416,7 @@ padding: 5rem 9% 1rem;
     text-align: center;
     position: relative;
     margin: 30px 0;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -432,19 +443,25 @@ padding: 5rem 9% 1rem;
 /* responsive mobile size change */
 @media (max-width:768px){
     .about{
-        left: 5px;
-        width: 330px;
+        margin-right:10%;
+        width: 0 20px;
         
 
     }
+    .about-right{
+      padding: 5px;
+      margin-right: 10px;
+      width: 100px;
+    }
     .about-con{
         flex-direction: column;
+        padding: 20px;
        
         
     }
     
     .about-left, .about-right{
-        width: 90%;
+        width: 100%;
     }
 
     .about-right h4{
@@ -465,7 +482,7 @@ padding: 5rem 9% 1rem;
 .skillss{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 20px;
+    gap: 10px;
     justify-items: center;
     align-items: center;
 }
@@ -476,7 +493,7 @@ padding: 5rem 9% 1rem;
     text-align: center;
     padding: 10px;
     border-radius: 20px;
-    box-shadow: 0px 0px 20px var(--tb-color);
+    box-shadow: 0px 0px 5px var(--tb-color);
 
 }
 .skills-content img{
@@ -505,17 +522,23 @@ padding: 5rem 9% 1rem;
 @media (max-width:768px){
 
 .skillss{
-grid-template-columns:repeat(3,1fr); 
+grid-template-columns:repeat(3,1fr);
+   margin-right: -0px;
+   padding: 0; 
+   
 }
 .skills-content{
-    width:90px;
+    width:100%;
     height: 140px;
-     padding: 10px;
+    padding: -0px;
+    max-width: 100%;
+    margin-right: 0px;
+    
+ 
 }
 .gitskills {
     background: white;
     border-radius: 70%;
-    
     height: 100px;
     width: 100px;
     align-items: center;
@@ -692,19 +715,19 @@ grid-template-columns:repeat(3,1fr);
 .services-section .logo-content,
 .services-section .banner{
 
-width:95%;
+width:90%;
 padding:2rem;
 font-size:1.6rem;
 
 
 }
 .vertical-line{
-    left: 7px;
+    left: 0px;
       background: linear-gradient(135deg, #b40a4e, #a2cecc);
 }
 
 .service-item::before{
-        content: "";
+    content: "";
     position: absolute;
     left: -65px;         
     top: 15px;           
@@ -713,6 +736,9 @@ font-size:1.6rem;
     background-color: var(--unick-color);
      background: linear-gradient(135deg, #b40a4e, #a2cecc);
 
+}
+.servicess-cont{
+    padding: 10px;
 }
 }
 
@@ -866,7 +892,12 @@ font-size:1.6rem;
 }
 
 }
-
+@media (max-width:768px){
+  .g-recaptcha {
+    transform: scale(0.85);   
+    transform-origin: 0 0;
+  }
+}
 /* Footer section  coding */
 
 .footer{
@@ -917,14 +948,14 @@ font-size:1.6rem;
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100vw;   
+    width: 100%;   
     z-index: 1;
     pointer-events: none;
 }
 
 .wave-fixed svg {
     width: 100%;  
-    height: 120px;
+    height: 150px;
     display: block;
 }
 
@@ -936,14 +967,14 @@ font-size:1.6rem;
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100vw; 
+    width: 100%; 
     z-index: 1;
     pointer-events: none;
 }
 
 .wave-fixed svg {
     width: 100%;    
-    height: 120px;
+    height: 150px;
     display: block;
 }
 
