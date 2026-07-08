@@ -20,7 +20,11 @@ html{
 }
 body{
     min-height: 10vh;
-    background: linear-gradient(135deg, #62d2ca, #e0e4e6, #18c8c2);
+
+    background:#eff0f1;
+    color:#022b55;
+    font-family:'Segoe UI',sans-serif;
+    
     font-family: 'Times New Roman';
     background-size: cover;
     overflow-x: hidden;
@@ -51,7 +55,7 @@ section{
     width: 50px;            
     height: 3px;            
     background-color:var(--unick-color);
-      background: linear-gradient(135deg, #b40a4e, #a2cecc);
+    background: linear-gradient(135deg, #21aca3, #a2cecc);
     border-radius: 2px;
 }
 
@@ -63,7 +67,7 @@ section{
     width: 25px;            
     height: 2px;            
     background-color: var(--unick-color) ;
-      background: linear-gradient(135deg, #b40a4e, #a2cecc);
+    background: linear-gradient(135deg, #21aca3, #a2cecc);
     border-radius: 2px;
     opacity: 0.8;           
 }
@@ -156,8 +160,6 @@ section{
     
 }
 
-
-
 .navbar{
     position:absolute;
     top:100%;
@@ -189,7 +191,7 @@ section{
  /* home  section  coding */
 
 .home{
-     background: #58a09b;
+    background:#21aca3;
     width: 100%;
     max-width: 900px;
     margin: auto;
@@ -205,8 +207,8 @@ section{
 
 .home-ing img{
     
-    width: 450px;
-    border-radius: 10%;
+    width: 350px;
+    border-radius: 30%;
     box-shadow: 5px 5px 30px var(--tb-color);
     
 }
@@ -232,11 +234,27 @@ section{
 }
 h3.my-profession{
     font-size: 37px;
-    margin: 15px 0;
+    margin: 1px 0;
 }
+.my-profession{
+    font-size:37px;
+    margin:5px 0;
+    line-height:1.2;
+    height:45px;
+    display:flex;
+    align-items:center;
+}
+
+
 .typing{
-    color: rgb(205, 225, 25);
+    color:rgb(205,225,25);
+    font-size:8px;
+    font-weight:600;
+    display:inline-block;
+    line-height:1;
 }
+
+
 .home-content p{
     font-size: 2rem;
 }
@@ -378,7 +396,7 @@ padding: 5rem 9% 1rem;
     display: flex;
     flex-wrap: wrap; 
     gap: 30px;
-    background: #a2cecc;
+    background:#f2f4f7;
     padding: 40px;
     width: 100%;
     margin: auto;
@@ -397,7 +415,7 @@ padding: 5rem 9% 1rem;
  .about-left{
     flex: 3;
  }
-  .about-left h4{
+.about-left h4{
 
     color: var(--tb-color);
   }
@@ -489,7 +507,7 @@ padding: 5rem 9% 1rem;
 .skills-content{
     width: 140px;
     height: 140px;
-    background: #0bc3b7;
+    background:#21aca3;
     text-align: center;
     padding: 10px;
     border-radius: 20px;
@@ -552,7 +570,110 @@ grid-template-columns:repeat(3,1fr);
 
 }     
     
+/* Projects Section */
 
+.projects h2{
+    margin-bottom:3rem;
+    color:var(--tb-color);
+    font-size:5rem;
+}
+
+.projects-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:#7ce7e0;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 0 10px var(--main-color);
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 20px var(--main-color);
+}
+
+.project-card h3{
+    font-size:2.3rem;
+    margin-bottom:15px;
+    color:#044558;
+}
+
+.project-card p{
+    font-size:1.6rem;
+    line-height:1.7;
+}
+
+.tech{
+    margin-top:20px;
+}
+
+.tech span{
+    display:inline-block;
+    background:var(--main-color);
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+    margin:5px;
+    font-size:1.3rem;
+}
+/* ===========================
+   Projects Responsive
+=========================== */
+
+@media (max-width:768px){
+
+    .projects{
+        padding: 5rem 5% 2rem;
+    }
+
+    .projects h2{
+        font-size:3.5rem;
+        text-align:center;
+    }
+
+    .projects-container{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .project-card{
+        width:100%;
+        padding:20px;
+        border-radius:15px;
+        box-sizing:border-box;
+    }
+
+    .project-card h3{
+        font-size:2rem;
+        text-align:center;
+    }
+
+    .project-card p{
+        font-size:1.5rem;
+        text-align:justify;
+        line-height:1.8;
+    }
+
+    .tech{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px;
+        margin-top:15px;
+    }
+
+    .tech span{
+        font-size:1.2rem;
+        padding:8px 14px;
+        margin:0;
+    }
+
+}
 
 
 /* services  section  coding */
@@ -753,7 +874,7 @@ font-size:1.6rem;
 }
 
 .contact-data{
-    background: var(--text-color);
+    
     text-align:center;
     width:100%;
     max-width:1050px;

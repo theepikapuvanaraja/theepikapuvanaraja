@@ -7,7 +7,7 @@ menu.onclick = () => {
 };
 // my typing
 var typed = new Typed(".typing",{
-    strings: ["Web Developer","logo designer","Youtuber"],
+    strings: ["SE Undergraduate","Frontend Developer"," Flutter developer","Web Developer"],
     typeSpeed:100,
     loop:true
 })
